@@ -3,21 +3,26 @@ using System;
 
 public partial class Coin : Area2D
 {
-	private GameManager gameManager;
-	private AnimationPlayer animationPlayer;
+	[Export] public int Points { get; set; } = 1;
+
+	private GameManager _gameManager;
+	private AnimationPlayer _anim;
 
 	public override void _Ready()
 	{
 		BodyEntered += OnBodyEntered;
-		
-		// Assumes GameManager is a sibling or parent node
-		gameManager = GetNode<GameManager>("%GameManager");
-		animationPlayer = GetNode<AnimationPlayer>("AnimationPlayer");
+		_gameManager = GetNode<GameManager>("%GameManager");
+		_anim = GetNode<AnimationPlayer>("AnimationPlayer");
 	}
 
 	private void OnBodyEntered(Node2D body)
 	{
-		gameManager.AddPoints(1);
-		animationPlayer.Play("pickup");
+		if (!body.IsInGroup("Player")) 
+			return;
+
+		_gameManager.AddPoints(Points);
+		_anim.Play("pickup");
+		// Optionnel : détruire après animation
+		_anim.AnimationFinished += _ => QueueFree();
 	}
 }
