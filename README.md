@@ -79,17 +79,22 @@ A simple but polished 2D platformer made in **Godot 4** using **C#**, originally
 
 ## 🎓 Roadmap
 
-| Feature                       | Status        |
-|-------------------------------|---------------|
-| Core movement + jumping       | ✅ Done        |
-| Coin collection + SFX         | ✅ Done        |
-| Win + Game Over screen        | 🟡 In progress |
-| Enemy and hazards             | ⬜ Planned     |
-| Power-ups                     | ⬜ Planned     |
-| Multiple levels + transitions | ⬜ Planned     |
-| Soundtrack & audio settings   | ⬜ Planned     |
-| Game export (HTML5, others)   | ⬜ Planned     |
-| Upload to Itch.io             | ⬜ Planned     |
+| Feature                         | Status         | Priority | ETA    | Notes                                 |
+|---------------------------------|----------------|----------|--------|---------------------------------------|
+| Core movement + jumping         | ✅ Done        | Low      | —      | Base tutorial implementation          |
+| Coin collection + SFX           | ✅ Done        | Low      | —      | Fully functional                      |
+| Win & Game Over screens         | 🟡 In Progress | High     | 1 day  | Polish UI transitions & animations    |
+| Enemy AI & Hazards              | 🟡 In Progress | High     | 3 days | Patrol, chase, damage feedback        |
+| Level transitions & selection   | 🟡 In Progress | Medium   | 2 days | Hub scene + unlock logic              |
+| Power‑ups (double jump, dash)   | ⬜ Planned     | Medium   | 1 wk   | Add gameplay depth                    |
+| Multiple levels + difficulty    | ⬜ Planned     | Medium   | 1 wk   | Design and balance 3 unique levels    |
+| UI Settings (audio, controls)   | ⬜ Planned     | Medium   | 2 days | Settings menu + persistence           |
+| Save system & high scores       | ⬜ Planned     | Medium   | 2 days | JSON save file for progress & scores  |
+| VFX & particle effects          | ⬜ Planned     | Low      | 3 days | Jump dust, coin pickup, damage FX     |
+| Audio settings & soundtrack     | ⬜ Planned     | Low      | 2 days | Background music + volume controls    |
+| Export builds & deploy          | ⬜ Planned     | High     | 1 day  | HTML5 + desktop builds → Itch.io      |
+| Documentation & portfolio       | ⬜ Planned     | Medium   | 3 days | README updates + dev diary            |
+
 
 ---
 
