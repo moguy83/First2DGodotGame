@@ -95,6 +95,72 @@ A simple but polished 2D platformer made in **Godot 4** using **C#**, originally
 | Export builds & deploy          | ⬜ Planned     | High     | 1 day  | HTML5 + desktop builds → Itch.io      |
 | Documentation & portfolio       | ⬜ Planned     | Medium   | 3 days | README updates + dev diary            |
 
+## 🧩 Feature Breakdown
+
+### Core movement + jumping
+- Implement basic horizontal movement using `Input.GetActionStrength`.
+- Add a jump mechanic with a configurable jump height.
+- Use a `RayCast2D` to check for ground collision before allowing jumps.
+
+### Coin collection + SFX
+- Add an `Area2D` node to coins for detection.
+- Play a sound effect when a coin is collected.
+- Update a UI counter in the HUD when coins are picked up.
+
+### Win & Game Over screens
+- Create separate scenes for Win and Game Over screens.
+- Add buttons for "Retry" and "Main Menu" navigation.
+- Trigger these screens based on game state (e.g., all coins collected or player death).
+
+### Enemy AI & Hazards
+- Use a `Path2D` for enemy patrol routes.
+- Add a `KinematicBody2D` for enemies with basic chase behavior.
+- Implement damage feedback (e.g., flashing sprite or knockback).
+
+### Level transitions & selection
+- Create a hub scene with level selection buttons.
+- Use `PackedScene` to load levels dynamically.
+- Add logic to unlock levels after completing the previous one.
+
+### Power-ups (double jump, dash)
+- Add a `PowerUp` node with a trigger area.
+- Implement double jump by tracking jump count.
+- Add a dash mechanic with a cooldown timer.
+
+### Multiple levels + difficulty
+- Design 3 levels with increasing difficulty.
+- Use different tilemaps and hazards for variety.
+- Balance enemy placement and coin distribution.
+
+### UI Settings (audio, controls)
+- Create a settings menu with sliders for audio volume.
+- Add keybinding options for controls.
+- Save settings using `File` or `ConfigFile`.
+
+### Save system & high scores
+- Use JSON to save player progress and high scores.
+- Load saved data on game start.
+- Display high scores in the main menu.
+
+### VFX & particle effects
+- Add a `Particles2D` node for jump dust and coin pickup effects.
+- Use animated sprites for damage feedback.
+- Create simple shaders for visual polish.
+
+### Audio settings & soundtrack
+- Add background music to levels.
+- Use an `AudioStreamPlayer` for sound effects.
+- Implement volume controls in the settings menu.
+
+### Export builds & deploy
+- Export the game as an HTML5 build.
+- Test the build in a browser for compatibility.
+- Deploy the game to Itch.io or similar platforms.
+
+### Documentation & portfolio
+- Write a development diary in the README.
+- Add GIFs or videos showcasing gameplay.
+- Include links to the deployed game and source code.
 
 ---
 

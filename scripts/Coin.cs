@@ -22,7 +22,5 @@ public partial class Coin : Area2D
 
 		_gameManager.AddPoints(Points);
 		_anim.Play("pickup");
-		// Optionnel : détruire après animation
-		_anim.AnimationFinished += _ => QueueFree();
 	}
 }
